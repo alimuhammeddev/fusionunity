@@ -13,6 +13,12 @@ import {
   Handshake,
 } from "lucide-react";
 import child1 from "./assets/child1.jpg";
+import child3 from "./assets/child3.jpg";
+import food from "./assets/food.jpg";
+import health from "./assets/health.jpg";
+import women from "./assets/women.jpg";
+import youth from "./assets/youth.jpg";
+import water from "./assets/water.jpg";
 
 export default function Home() {
   return (
@@ -111,25 +117,26 @@ export default function Home() {
         </div>
 
         <div>
-          <div className="mt-20 grid lg:grid-cols-2 gap-12 items-center">
+          <div className="mt-24 grid lg:grid-cols-2 gap-12">
             {/* Left Section */}
             <div>
               <p className="text-sm text-[#1C3D60] uppercase tracking-[0.3em] font-medium">
-                Because We Can
+                Creating Hope Together
               </p>
 
               <div className="w-24 h-px bg-[#1C3D60] mt-2"></div>
 
-              <h1 className="text-xl md:text-3xl font-bold text-[#1C3D60] mt-6 leading-tight">
-                How can we help them?
+              <h1 className="text-xl md:text-3xl font-bold text-[#1C3D60] mt-4 leading-tight">
+                Together, We Can Change Lives
               </h1>
 
-              <p className="text-gray-600 leading-relaxed mt-5 max-w-xl md:text-lg">
-                We believe every person, regardless of background, deserves
-                dignity, support, and the opportunity to live a meaningful life.
+              <p className="text-gray-600 leading-relaxed mt-3 max-w-xl md:text-lg">
+                Every act of kindness creates opportunities for brighter
+                futures. We are committed to supporting vulnerable communities
+                with compassion, dignity, and lasting impact.
               </p>
 
-              <button className="mt-8 px-6 py-3 bg-[#1C3D60] text-white rounded-full font-medium hover:bg-[#16324f] transition duration-300">
+              <button className="mt-8 px-6 cursor-pointer py-3 bg-[#1C3D60] text-white rounded-full font-medium hover:bg-[#16324f] transition duration-300">
                 Donate
               </button>
             </div>
@@ -199,8 +206,10 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="mt-24 grid lg:grid-cols-2 md:gap-16 items-center">
+      <div className="bg-[#F2F4F7]">
+        <div className="mt-24 grid lg:grid-cols-2 md:gap-16 items-center max-w-7xl mx-auto px-4 sm:px-6 p-10 lg:px-8">
           {/* Left Content */}
           <div>
             <div className="relative inline-block">
@@ -211,11 +220,11 @@ export default function Home() {
               <div className="w-24 h-[0.5px] bg-[#1C3D60] mt-2"></div>
             </div>
 
-            <h1 className="text-xl md:text-3xl font-bold text-[#1C3D60] mt-8 leading-tight max-w-2xl">
+            <h1 className="text-xl md:text-3xl font-bold text-[#1C3D60] mt-4 leading-tight max-w-2xl">
               Step forward, serve humanity, and help create a better future.
             </h1>
 
-            <p className="text-gray-600 leading-relaxed mt-6 max-w-2xl md:text-lg">
+            <p className="text-gray-600 leading-relaxed mt-3 max-w-2xl md:text-lg">
               Your support can bring hope, transform lives, and create
               meaningful change for vulnerable communities. Together, we can
               make a lasting impact.
@@ -229,7 +238,9 @@ export default function Home() {
                   <HandHelping className="w-6 h-6 text-[#ffffff]" />
                 </div>
 
-                <h1 className="text-lg font-semibold text-[#1C3D60]">Volunteer</h1>
+                <h1 className="text-lg font-semibold text-[#1C3D60]">
+                  Volunteer
+                </h1>
 
                 <p className="text-gray-600 leading-relaxed mt-3">
                   Join our dedicated volunteers and make a real difference in
@@ -321,10 +332,168 @@ export default function Home() {
             {/* Floating Stats Card */}
             <div className="absolute -top-5 left-4 sm:left-6 bg-white shadow-xl rounded-2xl px-4 py-3 sm:px-5 sm:py-4 border border-gray-100">
               <p className="text-2xl sm:text-3xl font-bold text-[#1C3D60]">
-                10K+
+                100+
               </p>
 
               <p className="text-xs sm:text-sm text-gray-500">Lives Impacted</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Heading Section */}
+        <div>
+          <div className="relative inline-block">
+            <p className="text-sm text-[#1C3D60] uppercase tracking-[0.35em] font-semibold">
+              Building a Better Future
+            </p>
+
+            <div className="w-24 h-[0.5px] bg-[#1C3D60] mt-2"></div>
+          </div>
+
+          <h1 className="text-xl md:text-3xl font-bold text-[#1C3D60] mt-4 leading-tight max-w-2xl">
+            Everything We Do is Driven by Humanity
+          </h1>
+
+          <p className="text-gray-600 leading-relaxed mt-3 max-w-2xl md:text-lg">
+            Through compassion, support, and collective action, we strive to
+            create meaningful change and bring hope to individuals and
+            communities in need.
+          </p>
+        </div>
+
+        {/* Cards */}
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Card 1 */}
+          <div className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition duration-500">
+            <div className="overflow-hidden">
+              <Image
+                src={child3}
+                alt="Education support"
+                className="w-full h-64 object-cover group-hover:scale-105 transition duration-700"
+              />
+            </div>
+
+            <div className="p-6">
+              <h3 className="text-xl font-bold text-[#1C3D60]">
+                Child Welfare & Education Support
+              </h3>
+
+              <p className="text-gray-600 mt-3 leading-relaxed">
+                We help children and young people access education and
+                opportunities that empower them for a brighter future.
+              </p>
+            </div>
+          </div>
+
+          {/* Card 2 */}
+          <div className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition duration-500">
+            <div className="overflow-hidden">
+              <Image
+                src={food}
+                alt="Food support"
+                className="w-full h-64 object-cover group-hover:scale-105 transition duration-700"
+              />
+            </div>
+
+            <div className="p-6">
+              <h3 className="text-xl font-bold text-[#1C3D60]">
+                Food & Relief
+              </h3>
+
+              <p className="text-gray-600 mt-3 leading-relaxed">
+                Providing meals, emergency aid, and relief support for families
+                and communities facing hardship.
+              </p>
+            </div>
+          </div>
+
+          {/* Card 3 */}
+          <div className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition duration-500">
+            <div className="overflow-hidden">
+              <Image
+                src={health}
+                alt="health"
+                className="w-full h-64 object-cover group-hover:scale-105 transition duration-700"
+              />
+            </div>
+
+            <div className="p-6">
+              <h3 className="text-xl font-bold text-[#1C3D60]">
+                Community / Healthcare & Medical Outreach
+              </h3>
+
+              <p className="text-gray-600 mt-3 leading-relaxed">
+                Building stronger communities through outreach programs,
+                healthcare initiatives, and social support projects.
+              </p>
+            </div>
+          </div>
+
+          {/* Card 4 */}
+          <div className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition duration-500">
+            <div className="overflow-hidden">
+              <Image
+                src={women}
+                alt="Widows and vulnerable adults"
+                className="w-full h-64 object-cover group-hover:scale-105 transition duration-700"
+              />
+            </div>
+
+            <div className="p-6">
+              <h3 className="text-xl font-bold text-[#1C3D60]">
+                Widows, Widowers & Support for Vulnerable Adults
+              </h3>
+
+              <p className="text-gray-600 mt-3 leading-relaxed">
+                Offering care, assistance, and empowerment programs for widows,
+                widowers, and elderly individuals in need.
+              </p>
+            </div>
+          </div>
+
+          {/* Card 5 */}
+          <div className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition duration-500">
+            <div className="overflow-hidden">
+              <Image
+                src={youth}
+                alt="Youth empowerment"
+                className="w-full h-64 object-cover group-hover:scale-105 transition duration-700"
+              />
+            </div>
+
+            <div className="p-6">
+              <h3 className="text-xl font-bold text-[#1C3D60]">
+                Youth Empowerment & Skills Development Programs
+              </h3>
+
+              <p className="text-gray-600 mt-3 leading-relaxed">
+                Equipping young people with skills, training, and mentorship to
+                help them become self-reliant and successful.
+              </p>
+            </div>
+          </div>
+
+          {/* Card 6 */}
+          <div className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition duration-500">
+            <div className="overflow-hidden">
+              <Image
+                src={water}
+                alt="Clean water and sanitation"
+                className="w-full h-64 object-cover group-hover:scale-105 transition duration-700"
+              />
+            </div>
+
+            <div className="p-6">
+              <h3 className="text-xl font-bold text-[#1C3D60]">
+                Clean Water & Sanitation
+              </h3>
+
+              <p className="text-gray-600 mt-3 leading-relaxed">
+                Improving access to safe drinking water and hygiene facilities
+                to promote healthier and more sustainable communities.
+              </p>
             </div>
           </div>
         </div>

@@ -19,6 +19,7 @@ import health from "./assets/health.jpg";
 import women from "./assets/women.jpg";
 import youth from "./assets/youth.jpg";
 import water from "./assets/water.jpg";
+import CTA from "./component/Cta";
 
 export default function Home() {
   return (
@@ -497,6 +498,10 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div>
+        <CTA />
       </div>
     </section>
   );

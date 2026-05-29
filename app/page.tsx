@@ -20,6 +20,7 @@ import women from "./assets/women.jpg";
 import youth from "./assets/youth.jpg";
 import water from "./assets/water.jpg";
 import CTA from "./component/Cta";
+import Footer from "./component/Footer";
 
 export default function Home() {
   return (
@@ -299,7 +300,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right Image */}
           <div className="relative mt-10 lg:mt-0">
             {/* Background Glow */}
             <div className="absolute top-10 right-0 w-52 sm:w-72 h-52 sm:h-72 bg-orange-100 rounded-full blur-3xl opacity-50"></div>
@@ -502,6 +502,10 @@ export default function Home() {
 
       <div>
         <CTA />
+      </div>
+
+      <div>
+        <Footer />
       </div>
     </section>
   );

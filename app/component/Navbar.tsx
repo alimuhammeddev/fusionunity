@@ -9,11 +9,11 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", href: "#" },
-    { name: "Programs", href: "#programs" },
-    { name: "Donate", href: "#donate" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "Programs", href: "/program" },
+    { name: "Donate", href: "/donate" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -39,7 +39,7 @@ export default function Navbar() {
 
             {/* Donate Button */}
             <a
-              href="#donate"
+              href="/donate"
               className="ml-4 px-4 py-2 bg-[#1C3D60] text-white rounded-full hover:bg-[#2F2E31] transition font-medium text-base"
             >
               Donate Now
@@ -73,7 +73,7 @@ export default function Navbar() {
 
             {/* Donate Button (Mobile) */}
             <a
-              href="#donate"
+              href="/donate"
               className="mt-2 px-4 py-2 bg-[#1C3D60] text-white rounded-lg text-center hover:bg-[#2F2E31] transition font-medium text-lg"
               onClick={() => setIsOpen(false)}
             >

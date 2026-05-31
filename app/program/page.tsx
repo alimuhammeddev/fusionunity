@@ -1,6 +1,8 @@
 import Navbar from "../component/Navbar";
 import Image from "next/image";
 import programhero from "./assets/programhero.jpg";
+import CTA from "../component/Cta";
+import Footer from "../component/Footer";
 
 export default function Program() {
   return (
@@ -190,6 +192,14 @@ export default function Program() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div>
+        <CTA />
+      </div>
+
+      <div>
+        <Footer />
       </div>
     </section>
   );

@@ -3,7 +3,7 @@ import cta from "./assets/cta.jpg";
 
 export default function CTA() {
   return (
-    <section className="relative mt-20">
+    <section className="relative mt-16">
       <div className="relative overflow-hidden">
         <Image
           src={cta}

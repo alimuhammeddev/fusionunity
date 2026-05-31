@@ -64,12 +64,77 @@ export default function About() {
             <Image src={about} alt="About" className="rounded-xl" />
           </div>
         </div>
+      </div>
 
-        <div className="mt-16">
-            <div>
-                <h1>Our Story</h1>
-                <p></p>
+      <div className="bg-[#F2F4F7]">
+        <div className="mt-10 max-w-7xl mx-auto md:p-7 p-4">
+          <div className="max-w-3xl">
+            <p className="uppercase tracking-[0.3em] text-sm text-[#1C3D60] font-medium">
+              Who We Are
+            </p>
+
+            <div className="w-24 h-px bg-[#1C3D60] mt-3"></div>
+
+            <h2 className="text-xl md:text-3xl font-bold text-[#1C3D60] mt-4">
+              Building Hope Through Action
+            </h2>
+
+            <p className="mt-2 text-gray-600 leading-relaxed">
+              We are committed to empowering communities through support,
+              education, compassion, and sustainable development initiatives.
+            </p>
+          </div>
+
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5">
+            {/* Story */}
+            <div className="bg-white rounded-3xl md:p-8 p-5 shadow-sm border border-gray-100 hover:shadow-lg transition">
+              <h3 className="text-2xl font-bold text-[#1C3D60]">Our Story</h3>
+
+              <p className="mt-4 text-gray-600 leading-relaxed">
+                Fusion Unity Empowerment Foundation started from a desire to
+                uplift vulnerable individuals and remind them they are not
+                alone. What began with small community support initiatives has
+                evolved into a mission-driven foundation focused on education,
+                empowerment, humanitarian relief, and sustainable impact across
+                communities.
+              </p>
             </div>
+
+            {/* Vision */}
+            <div className="bg-white rounded-3xl md:p-8 p-5 shadow-sm border border-gray-100 hover:shadow-lg transition">
+              <h3 className="text-2xl font-bold text-[#1C3D60]">Our Vision</h3>
+
+              <p className="mt-4 text-gray-600 leading-relaxed">
+                To create communities where children have access to education,
+                young people have opportunities to thrive, vulnerable
+                individuals live with dignity, and sustainable support systems
+                create lasting change.
+              </p>
+            </div>
+
+            {/* Mission */}
+            <div className="bg-white rounded-3xl md:p-8 p-5 shadow-sm border border-gray-100 hover:shadow-lg transition">
+              <h3 className="text-2xl font-bold text-[#1C3D60]">Our Mission</h3>
+
+              <p className="mt-4 text-gray-600 leading-relaxed">
+                To provide practical support through education initiatives,
+                empowerment programs, humanitarian assistance, and community
+                development projects that inspire hope and improve lives.
+              </p>
+            </div>
+
+            {/* Duties */}
+            <div className="bg-white rounded-3xl md:p-8 p-5 shadow-sm border border-gray-100 hover:shadow-lg transition">
+              <h3 className="text-2xl font-bold text-[#1C3D60]">Our Duties</h3>
+
+              <p className="mt-4 text-gray-600 leading-relaxed">
+                We are committed to transparency, responsible resource
+                management, and ensuring every donation reaches meaningful
+                causes. Through regular updates and accountability, we build
+                trust with supporters and partners.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

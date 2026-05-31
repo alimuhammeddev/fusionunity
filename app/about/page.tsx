@@ -2,6 +2,9 @@ import Image from "next/image";
 import Navbar from "../component/Navbar";
 import abouthero from "./assets/abouthero.jpg";
 import about from "./assets/about.jpg";
+import { HeartHandshake, HandCoins, Users } from "lucide-react";
+import CTA from "../component/Cta";
+import Footer from "../component/Footer";
 
 export default function About() {
   return (
@@ -67,7 +70,7 @@ export default function About() {
       </div>
 
       <div className="bg-[#F2F4F7]">
-        <div className="mt-10 max-w-7xl mx-auto md:p-7 p-4">
+        <div className="mt-16 max-w-7xl mx-auto md:p-7 p-4">
           <div className="max-w-3xl">
             <p className="uppercase tracking-[0.3em] text-sm text-[#1C3D60] font-medium">
               Who We Are
@@ -85,9 +88,9 @@ export default function About() {
             </p>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="mt-7 grid grid-cols-1 md:grid-cols-2 gap-5 mb-7">
             {/* Story */}
-            <div className="bg-white rounded-3xl md:p-8 p-5 shadow-sm border border-gray-100 hover:shadow-lg transition">
+            <div className="bg-white rounded-3xl md:p-8 p-5 shadow-sm border border-gray-100 hover:shadow-2xs transition">
               <h3 className="text-2xl font-bold text-[#1C3D60]">Our Story</h3>
 
               <p className="mt-4 text-gray-600 leading-relaxed">
@@ -101,7 +104,7 @@ export default function About() {
             </div>
 
             {/* Vision */}
-            <div className="bg-white rounded-3xl md:p-8 p-5 shadow-sm border border-gray-100 hover:shadow-lg transition">
+            <div className="bg-white rounded-3xl md:p-8 p-5 shadow-sm border border-gray-100 hover:shadow-2xs transition">
               <h3 className="text-2xl font-bold text-[#1C3D60]">Our Vision</h3>
 
               <p className="mt-4 text-gray-600 leading-relaxed">
@@ -113,7 +116,7 @@ export default function About() {
             </div>
 
             {/* Mission */}
-            <div className="bg-white rounded-3xl md:p-8 p-5 shadow-sm border border-gray-100 hover:shadow-lg transition">
+            <div className="bg-white rounded-3xl md:p-8 p-5 shadow-sm border border-gray-100 hover:shadow-2xs transition">
               <h3 className="text-2xl font-bold text-[#1C3D60]">Our Mission</h3>
 
               <p className="mt-4 text-gray-600 leading-relaxed">
@@ -124,7 +127,7 @@ export default function About() {
             </div>
 
             {/* Duties */}
-            <div className="bg-white rounded-3xl md:p-8 p-5 shadow-sm border border-gray-100 hover:shadow-lg transition">
+            <div className="bg-white rounded-3xl md:p-8 p-5 shadow-sm border border-gray-100 hover:shadow-2xs transition">
               <h3 className="text-2xl font-bold text-[#1C3D60]">Our Duties</h3>
 
               <p className="mt-4 text-gray-600 leading-relaxed">
@@ -138,8 +141,79 @@ export default function About() {
         </div>
       </div>
 
+      <div className="mt-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl justify-center text-center mx-auto">
+          <p className="uppercase tracking-[0.3em] text-sm text-[#1C3D60] font-medium">
+            Make A Difference
+          </p>
+
+          <div className="w-24 h-px bg-[#1C3D60] mt-3 text-center mx-auto"></div>
+
+          <h2 className="text-xl md:text-3xl font-bold text-[#1C3D60] mt-3">
+            Help us reach more children, youths, and vulnerable communities
+          </h2>
+
+          <p className="mt-2 text-gray-600 leading-relaxed">
+            Together, every act of support creates opportunities, restores hope,
+            and changes lives.
+          </p>
+        </div>
+
+        <div className="md:mt-10 mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Card 1 */}
+          <div className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition">
+            <div className="w-14 h-14 rounded-2xl bg-[#1C3D60]/10 flex items-center justify-center">
+              <HeartHandshake className="text-[#1C3D60] w-7 h-7" />
+            </div>
+
+            <h2 className="text-2xl font-bold text-[#1C3D60] mt-6">
+              Give Hope
+            </h2>
+
+            <p className="mt-4 text-gray-600 leading-relaxed">
+              Your kindness helps provide care, support, and opportunities for
+              people facing difficult circumstances.
+            </p>
+          </div>
+
+          {/* Card 2 */}
+          <div className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition">
+            <div className="w-14 h-14 rounded-2xl bg-[#1C3D60]/10 flex items-center justify-center">
+              <HandCoins className="text-[#1C3D60] w-7 h-7" />
+            </div>
+
+            <h2 className="text-2xl font-bold text-[#1C3D60] mt-6">Donate</h2>
+
+            <p className="mt-4 text-gray-600 leading-relaxed">
+              Every donation helps fund education, relief efforts, empowerment
+              programs, and community projects.
+            </p>
+          </div>
+
+          {/* Card 3 */}
+          <div className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition">
+            <div className="w-14 h-14 rounded-2xl bg-[#1C3D60]/10 flex items-center justify-center">
+              <Users className="text-[#1C3D60] w-7 h-7" />
+            </div>
+
+            <h2 className="text-2xl font-bold text-[#1C3D60] mt-6">
+              Volunteer
+            </h2>
+
+            <p className="mt-4 text-gray-600 leading-relaxed">
+              Use your time, skills, and passion to help create meaningful
+              change within communities.
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div>
-        
+        <CTA />
+      </div>
+
+      <div>
+        <Footer />
       </div>
     </section>
   );

@@ -32,17 +32,17 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#programs" className="hover:text-white transition">
+                <a href="/program" className="hover:text-white transition">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#volunteer" className="hover:text-white transition">
+                <a href="/volunteer" className="hover:text-white transition">
                   Become a Volunteer
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-white transition">
+                <a href="/contact" className="hover:text-white transition">
                   Contact
                 </a>
               </li>

@@ -21,6 +21,7 @@ import youth from "./assets/youth.jpg";
 import water from "./assets/water.jpg";
 import CTA from "./component/Cta";
 import Footer from "./component/Footer";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -57,12 +58,16 @@ export default function Home() {
           </p>
 
           <div className="flex flex-row md:gap-10 gap-3 mt-2">
-            <button className="md:mt-8 px-7 py-3 rounded-full bg-[#1C3D60] text-white font-medium hover:bg-[#2F2E31] cursor-pointer active:scale-95 transition duration-200">
-              Donate Now
-            </button>
-            <button className="md:mt-8 px-7 py-3 rounded-full bg-[#336F7C] text-white font-medium hover:bg-[#2F2E31] cursor-pointer active:scale-95 transition duration-200">
-              Get Involved
-            </button>
+            <Link href="/donate">
+              <button className="md:mt-8 px-7 py-3 rounded-full bg-[#1C3D60] text-white font-medium hover:bg-[#2F2E31] cursor-pointer active:scale-95 transition duration-200">
+                Donate Now
+              </button>
+            </Link>
+            <Link href="/volunteer">
+              <button className="md:mt-8 px-7 py-3 rounded-full bg-[#336F7C] text-white font-medium hover:bg-[#2F2E31] cursor-pointer active:scale-95 transition duration-200">
+                Get Involved
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -138,9 +143,11 @@ export default function Home() {
                 with compassion, dignity, and lasting impact.
               </p>
 
+              <Link href="/donate">
               <button className="mt-8 px-6 cursor-pointer py-3 bg-[#1C3D60] text-white rounded-full font-medium hover:bg-[#16324f] transition duration-300">
                 Donate
               </button>
+              </Link>
             </div>
 
             {/* Right Section */}

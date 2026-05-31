@@ -1,5 +1,6 @@
 import Image from "next/image";
 import cta from "./assets/cta.jpg";
+import Link from "next/link";
 
 export default function CTA() {
   return (
@@ -25,9 +26,11 @@ export default function CTA() {
               emotional support to help children learn, grow, and thrive.
             </p>
 
-            <button className="mt-6 px-6 py-3 cursor-pointer bg-white text-[#1C3D60] rounded-full font-semibold hover:scale-105 transition duration-300">
-              Support the Cause
-            </button>
+            <Link href="/donate">
+              <button className="mt-6 px-6 py-3 cursor-pointer bg-white text-[#1C3D60] rounded-full font-semibold transition duration-300">
+                Support the Cause
+              </button>
+            </Link>
           </div>
         </div>
       </div>

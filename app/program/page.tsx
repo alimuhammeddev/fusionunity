@@ -3,6 +3,7 @@ import Image from "next/image";
 import programhero from "./assets/programhero.jpg";
 import CTA from "../component/Cta";
 import Footer from "../component/Footer";
+import Link from "next/link";
 
 export default function Program() {
   return (
@@ -80,9 +81,11 @@ export default function Program() {
             </ul>
 
             <div className="mt-8">
-              <button className="px-4 py-3 bg-[#1C3D60] text-white rounded-xl hover:bg-[#16324f] transition duration-300">
-                Donate to Child Welfare
-              </button>
+              <Link href="/donate">
+                <button className="px-4 py-3 bg-[#1C3D60] text-white rounded-xl hover:bg-[#16324f] transition duration-300">
+                  Donate to Child Welfare
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -107,9 +110,11 @@ export default function Program() {
             </ul>
 
             <div className="mt-8">
-              <button className="px-4 py-3 bg-[#1C3D60] text-white rounded-xl hover:bg-[#16324f] transition duration-300">
-                Donate to Food Relief
-              </button>
+              <Link href="/donate">
+                <button className="px-4 py-3 bg-[#1C3D60] text-white rounded-xl hover:bg-[#16324f] transition duration-300">
+                  Donate to Food Relief
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -134,9 +139,11 @@ export default function Program() {
             </ul>
 
             <div className="mt-8">
-              <button className="px-4 py-3 bg-[#1C3D60] text-white rounded-xl hover:bg-[#16324f] transition duration-300">
-                Donate to Youth Empowerment
-              </button>
+              <Link href="/donate">
+                <button className="px-4 py-3 bg-[#1C3D60] text-white rounded-xl hover:bg-[#16324f] transition duration-300">
+                  Donate to Youth Empowerment
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -161,9 +168,11 @@ export default function Program() {
             </ul>
 
             <div className="mt-8">
-              <button className="px-4 py-3 bg-[#1C3D60] text-white rounded-xl hover:bg-[#16324f] transition duration-300">
-                Donate to Community Support
-              </button>
+              <Link href="/donate">
+                <button className="px-4 py-3 bg-[#1C3D60] text-white rounded-xl hover:bg-[#16324f] transition duration-300">
+                  Donate to Community Support
+                </button>
+              </Link>
             </div>
           </div>
         </div>

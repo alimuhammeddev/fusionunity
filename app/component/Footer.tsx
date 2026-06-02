@@ -66,19 +66,19 @@ export default function Footer() {
             <h3 className="font-semibold text-lg mb-5">Contact Us</h3>
 
             <div className="space-y-4 text-gray-300">
-              <div className="flex gap-3">
+              <div className="flex gap-3 items-center">
                 <MapPin className="w-5 h-5 mt-1 shrink-0" />
                 <p>Lagos, Nigeria</p>
               </div>
 
-              <div className="flex gap-3">
+              <div className="flex gap-3 items-center">
                 <Phone className="w-5 h-5 shrink-0" />
-                <p>+234 XXX XXX XXXX</p>
+                <p>+234 8134448552</p>
               </div>
 
-              <div className="flex gap-3">
+              <div className="flex gap-3 items-center">
                 <Mail className="w-5 h-5 shrink-0" />
-                <p>info@fusionunity.org</p>
+                <p>Fusionunityfoundation@gmail.com</p>
               </div>
             </div>
 

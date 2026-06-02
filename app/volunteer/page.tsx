@@ -308,61 +308,14 @@ export default function Volunteer() {
             </div>
           </div>
 
-          {/* Form Section */}
-          <div className="bg-white rounded-3xl shadow-lg md:p-8 p-5 border border-gray-100 order-2 lg:order-2">
-            <p className="uppercase tracking-[0.3em] text-sm text-[#1C3D60] font-medium">
-              Volunteer Form
-            </p>
-
-            <h2 className="text-xl font-semibold text-[#1C3D60] mt-2">
-              Register Now
-            </h2>
-
-            <form className="mt-4 space-y-5">
-              <input
-                type="text"
-                placeholder="Full Name"
-                className="w-full border border-gray-200 rounded-xl px-4 py-3 outline-none focus:border-[#1C3D60]"
-              />
-
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="w-full border border-gray-200 rounded-xl px-4 py-3 outline-none focus:border-[#1C3D60]"
-              />
-
-              <input
-                type="text"
-                placeholder="Address Line"
-                className="w-full border border-gray-200 rounded-xl px-4 py-3 outline-none focus:border-[#1C3D60]"
-              />
-
-              <input
-                type="tel"
-                placeholder="Phone Number"
-                className="w-full border border-gray-200 rounded-xl px-4 py-3 outline-none focus:border-[#1C3D60]"
-              />
-
-              <select className="w-full border border-gray-200 rounded-xl px-4 py-3 outline-none focus:border-[#1C3D60]">
-                <option>Select Volunteer Role</option>
-                <option>Children Outreach Team</option>
-                <option>Youth Empowerment Assistants</option>
-                <option>Family Support Volunteers</option>
-                <option>Water Project Volunteers</option>
-                <option>Media & Documentation</option>
-                <option>Administrative & Logistics</option>
-              </select>
-
-              <textarea
-                rows={5}
-                placeholder="Why do you want to volunteer?"
-                className="w-full border border-gray-200 rounded-xl px-4 py-3 outline-none focus:border-[#1C3D60]"
-              />
-
-              <button className="w-full bg-[#1C3D60] text-white py-4 rounded-xl font-semibold hover:bg-[#16324f] transition">
-                Submit Application
-              </button>
-            </form>
+          {/* Google Form Section */}
+          <div className="order-2 lg:order-2 bg-white rounded-3xl shadow-sm p-3 border border-gray-100">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSfpVA0JDJ-fjQO3qvC9UkhzzFkCIAmSW8luOY-M_GoAhRsKsA/viewform?embedded=true"
+              width="100%"
+              height="700"
+              className="rounded-2xl border-0 w-full"
+            />
           </div>
         </div>
       </div>

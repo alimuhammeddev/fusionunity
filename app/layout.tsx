@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Fusion Unity",
   description: "Fusion Unity is a platform that connects people and ideas to create a better future. We believe in the power of collaboration and innovation to drive positive change in the world.",
+  icons: {
+    icon: "/icon.jpg",
+  }
 };
 
 export default function RootLayout({

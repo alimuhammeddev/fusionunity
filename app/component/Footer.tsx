@@ -2,6 +2,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import Image from "next/image";
 import footer from "./assets/footer.png";
 import Link from "next/link";
+import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -83,17 +84,19 @@ export default function Footer() {
             </div>
 
             {/* Social Icons */}
-            <div className="flex gap-4 mt-6">
-              <a className="hover:scale-110 transition cursor-pointer">
-                Facebook
+            <div className="flex gap-5 mt-3">
+              <a
+                href="https://www.instagram.com/fusionunityfoundation?"
+                className="text-white hover:text-gray-300 hover:scale-110 transition"
+              >
+                <FaInstagram size={20} />
               </a>
 
-              <a className="hover:scale-110 transition cursor-pointer">
-                Instagram
-              </a>
-
-              <a className="hover:scale-110 transition cursor-pointer">
-                Twitter
+              <a
+                href="https://x.com/fusionunityemp_?"
+                className="text-white hover:text-gray-300 hover:scale-110 transition"
+              >
+                <FaXTwitter size={20} />
               </a>
             </div>
           </div>

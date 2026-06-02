@@ -1,3 +1,6 @@
+"use client";
+
+import {  useState } from "react";
 import Image from "next/image";
 import CTA from "../component/Cta";
 import FAQ from "../component/FAQ";
@@ -7,6 +10,22 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import chero from "./assets/chero.jpg";
 
 export default function Contact() {
+  const [fullName, setFullName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [subject, setSubject] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const mailTo = "Fusionunityfoundation@gmail.com";
+    const subjectText = subject || "Contact form message";
+    const body = `Name: ${fullName}\nEmail: ${email}\nSubject: ${subjectText}\n\nMessage:\n${message}`;
+    const mailtoLink = `mailto:${mailTo}?subject=${encodeURIComponent(subjectText)}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailtoLink;
+  };
+
   return (
     <section>
       <Navbar />
@@ -89,32 +108,43 @@ export default function Contact() {
               Send Us a Message
             </h2>
 
-            <form className="mt-5 space-y-5">
+            <form className="mt-5 space-y-5" onSubmit={handleSubmit}>
               <input
                 type="text"
                 placeholder="Full Name"
+                value={fullName ?? ""}
+                onChange={(event) => setFullName(event.target.value)}
                 className="w-full border border-gray-200 rounded-xl px-4 py-3 outline-none focus:border-[#1C3D60]"
+                required
               />
 
               <input
                 type="email"
                 placeholder="Email Address"
+                value={email ?? ""}
+                onChange={(event) => setEmail(event.target.value)}
                 className="w-full border border-gray-200 rounded-xl px-4 py-3 outline-none focus:border-[#1C3D60]"
+                required
               />
 
               <input
                 type="text"
                 placeholder="Subject"
+                value={subject ?? ""}
+                onChange={(event) => setSubject(event.target.value)}
                 className="w-full border border-gray-200 rounded-xl px-4 py-3 outline-none focus:border-[#1C3D60]"
               />
 
               <textarea
                 rows={5}
                 placeholder="Your Message"
+                value={message ?? ""}
+                onChange={(event) => setMessage(event.target.value)}
                 className="w-full border border-gray-200 rounded-xl px-4 py-3 outline-none focus:border-[#1C3D60]"
+                required
               />
 
-              <button className="w-full bg-[#1C3D60] text-white py-4 rounded-xl font-semibold hover:bg-[#16324f] transition">
+              <button type="submit" className="w-full bg-[#1C3D60] text-white py-4 rounded-xl font-semibold hover:bg-[#16324f] transition">
                 Send Message
               </button>
             </form>

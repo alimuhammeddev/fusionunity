@@ -14,16 +14,50 @@ export default function Contact() {
   const [email, setEmail] = useState<string>("");
   const [subject, setSubject] = useState<string>("");
   const [message, setMessage] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
+  const [successMessage, setSuccessMessage] = useState<string>("");
+  const [errorMessage, setErrorMessage] = useState<string>("");
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setLoading(true);
+    setSuccessMessage("");
+    setErrorMessage("");
 
-    const mailTo = "Fusionunityfoundation@gmail.com";
-    const subjectText = subject || "Contact form message";
-    const body = `Name: ${fullName}\nEmail: ${email}\nSubject: ${subjectText}\n\nMessage:\n${message}`;
-    const mailtoLink = `mailto:${mailTo}?subject=${encodeURIComponent(subjectText)}&body=${encodeURIComponent(body)}`;
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fullName,
+          email,
+          subject,
+          message,
+        }),
+      });
 
-    window.location.href = mailtoLink;
+      const data = await response.json();
+
+      if (response.ok) {
+        setSuccessMessage("Message sent successfully! We'll get back to you soon.");
+        setFullName("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
+        
+        // Clear success message after 5 seconds
+        setTimeout(() => setSuccessMessage(""), 5000);
+      } else {
+        setErrorMessage(data.error || "Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      setErrorMessage("An error occurred. Please try again later.");
+      console.error("Error sending email:", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -108,6 +142,18 @@ export default function Contact() {
               Send Us a Message
             </h2>
 
+            {successMessage && (
+              <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
+                {successMessage}
+              </div>
+            )}
+
+            {errorMessage && (
+              <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
+                {errorMessage}
+              </div>
+            )}
+
             <form className="mt-5 space-y-5" onSubmit={handleSubmit}>
               <input
                 type="text"
@@ -116,6 +162,7 @@ export default function Contact() {
                 onChange={(event) => setFullName(event.target.value)}
                 className="w-full border border-gray-200 rounded-xl px-4 py-3 outline-none focus:border-[#1C3D60]"
                 required
+                disabled={loading}
               />
 
               <input
@@ -125,6 +172,7 @@ export default function Contact() {
                 onChange={(event) => setEmail(event.target.value)}
                 className="w-full border border-gray-200 rounded-xl px-4 py-3 outline-none focus:border-[#1C3D60]"
                 required
+                disabled={loading}
               />
 
               <input
@@ -133,6 +181,7 @@ export default function Contact() {
                 value={subject ?? ""}
                 onChange={(event) => setSubject(event.target.value)}
                 className="w-full border border-gray-200 rounded-xl px-4 py-3 outline-none focus:border-[#1C3D60]"
+                disabled={loading}
               />
 
               <textarea
@@ -142,10 +191,15 @@ export default function Contact() {
                 onChange={(event) => setMessage(event.target.value)}
                 className="w-full border border-gray-200 rounded-xl px-4 py-3 outline-none focus:border-[#1C3D60]"
                 required
+                disabled={loading}
               />
 
-              <button type="submit" className="w-full bg-[#1C3D60] text-white py-4 rounded-xl font-semibold hover:bg-[#16324f] transition">
-                Send Message
+              <button 
+                type="submit" 
+                disabled={loading}
+                className="w-full bg-[#1C3D60] text-white py-4 rounded-xl font-semibold hover:bg-[#16324f] transition disabled:bg-gray-400 disabled:cursor-not-allowed"
+              >
+                {loading ? "Sending..." : "Send Message"}
               </button>
             </form>
           </div>

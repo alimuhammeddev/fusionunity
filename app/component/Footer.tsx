@@ -33,7 +33,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/program" className="hover:text-white transition">
+                <a href="/about" className="hover:text-white transition">
                   About Us
                 </a>
               </li>

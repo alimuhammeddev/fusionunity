@@ -121,7 +121,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Built With Love */}
+        {/* Built With Love 
         <div className="py-4 px-6">
           <p className="text-center text-base text-gray-400">
             Built with ❤️ by{" "}
@@ -130,6 +130,7 @@ export default function Footer() {
             </Link>
           </p>
         </div>
+        */}
       </div>
     </footer>
   );

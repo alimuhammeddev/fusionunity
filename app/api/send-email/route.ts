@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
     // Email content
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: 'Fusionunityfoundation@gmail.com',
+      to: 'admin@fusionunity.org',
       subject: subject || 'New Contact Form Message',
       html: `
         <h2>New Contact Form Submission</h2>

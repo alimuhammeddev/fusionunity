@@ -51,7 +51,7 @@ export default function Navbar() {
             className="md:hidden p-2 rounded-md"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={24} aria-label="Close" /> : <Menu size={24} aria-label="Menu" />}
           </button>
         </div>
       </div>

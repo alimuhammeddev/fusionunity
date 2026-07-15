@@ -22,7 +22,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="logo">
-            <Image src={logo} alt="Logo" width={120} />
+            <Image src={logo} alt="Fusion Unity Foundation logo" width={120} />
           </div>
 
           {/* Desktop Nav */}
@@ -49,9 +49,14 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2 rounded-md"
+            aria-label={
+              isOpen ? "Close navigation menu" : "Open navigation menu"
+            }
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X size={24} aria-label="Close" /> : <Menu size={24} aria-label="Menu" />}
+            {isOpen ? <X size={24} /> : <Menu size={24} aria-label="Menu" />}
           </button>
         </div>
       </div>

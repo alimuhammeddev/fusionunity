@@ -88,6 +88,7 @@ export default function Footer() {
               <a
                 href="https://www.instagram.com/fusionunityfoundation?"
                 className="text-white hover:text-gray-300 hover:scale-110 transition"
+                aria-label="Instagram"
               >
                 <FaInstagram size={20} />
               </a>
@@ -95,6 +96,7 @@ export default function Footer() {
               <a
                 href="https://x.com/fusionunityemp_?"
                 className="text-white hover:text-gray-300 hover:scale-110 transition"
+                aria-label="X (Twitter)"
               >
                 <FaXTwitter size={20} />
               </a>
